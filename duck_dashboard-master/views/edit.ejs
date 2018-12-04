@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+  </head>
+  <body>
+    <h1>Edit User: </h1>
+    <h1>Form goes here</h1>
+      <form action="/edits/<%= duck._id %>" method="post">
+          <p>Name: <input type="text" name="name"></p>
+          <p>
+              Gender:
+              <select name="gender">
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+              </select>
+          </p>
+          <p>Age: <input type="number" name="age" min="0"></p>
+          <p>Favorite pond: <input type="text" name="favpond"></p>
+          <input type="submit" value="Create a duck">
+      </form>
+      <a href="/delete/<%= duck._id %>">delete</a>
+  </body>
+</html>
